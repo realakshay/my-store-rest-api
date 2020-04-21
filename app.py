@@ -19,9 +19,10 @@ api.add_resource(ItemList,"/items")
 api.add_resource(StoreList,'/stores')
 api.add_resource(RegisterUser,"/register")
 
+
 @app.route('/')
 def hello_world():
-    return "Application is started...!"
+    return "<h3>Hey, Application is started...!</h3>"
 
 
 if __name__ == "__main__":
