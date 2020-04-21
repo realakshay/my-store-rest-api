@@ -22,7 +22,7 @@ class Store(Resource):
         store=StoreModel.find_by_name(name)
         if store:
             store.delete_from_db()
-        return {"message":"store deleted"}
+        return {"message":"store deleted"}, 201
 
     def put(self):
         pass
@@ -30,3 +30,4 @@ class Store(Resource):
 class StoreList(Resource):
     def get(self):
         return {'stores':[store.json() for store in StoreModel.query.all()]}
+    
